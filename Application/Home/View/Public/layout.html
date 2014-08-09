@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldIE"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldIE"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldIE"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh"><!--<![endif]-->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <include file="PUBLIC:header" />
+    <block name="mod_css"></block>
+</head>
+<body>
+<block name="top">
+    <include file="PUBLIC:top" />
+</block>
+<block name="left"><include file="PUBLIC:left" /></block>
+<block name="main">
+    <div class="main" id="main">
+        <div id="main-content" class="content show_left">
+            <block name="breadcrumbs"><include file="PUBLIC:breadcrumbs" /></block>
+            <block name="content">主体内容</block>
+        </div>
+    </div>
+</block>
+<block name="footer">
+    <include file="PUBLIC:footer" />
+</block>
+</body>
+</html>

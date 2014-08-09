@@ -1,0 +1,17 @@
+body{background-color: #4da8f5;}
+.up{display: none;}
+
+/* login */
+.login_reg{width: 450px; height: 280px; background-color: #fff; border-radius: 5px; position: absolute; top:50%;left:50%;
+	margin-top:-150px;margin-left:-250px; box-shadow: 0 2px 5px #00599e}
+.login_reg_title{height: 40px; line-height: 40px; width: 60%; text-align: center; margin: 0 auto; background-color: #58b1fc; font-size: 1.6em; color: #fff; border-radius: 0 0 5px 5px; font-weight: bold;letter-spacing:6px;
+text-shadow:1px 1px 1px rgba(0,0,0, .2); font-family: '微软雅黑'}
+.login_reg_form{margin:40px 0 0 }
+.login_reg_form td{padding-top:10px;}
+.login_reg_form input{height: 24px; border:1px #eee solid;}
+.login_reg_btn button{border:0;border-radius: 2px; background-color: #58b1fc; text-align: center; padding: 0 10px; line-height: 24px; color: #fff; margin-right:10px; }
+
+
+/* register */
+.register{height: 350px;}
+.register .login_reg_form{margin-top: 20px;}

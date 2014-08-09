@@ -1,0 +1,112 @@
+<extend name="Public:layout" />
+<block name="breadcrumbs"></block>
+<block name="content">
+    <div class="notice relative">
+        <p class="fl">
+            <span>
+                <i class="icon icon_home vam"></i>
+                <strong class="vam">公告：</strong>
+            </span>
+            <span class="notice_li vam">
+                <a href="#">这里是最新公告信息这里是最新公告信息...</a>
+            </span>
+        </p>
+        <p class="tool_bar textr fr">
+            <label><input id="isHideCity" type="checkbox" autocomplete="off" class="vam" /> <span class="vam">选择城市</span></label>
+            <label><input id="isScroll" type="checkbox" autocomplete="off" class="vam" /> <span class="vam">滚动</span></label>
+            <label><input id="isEncrypt" type="checkbox" autocomplete="off" class="vam" /> <span class="vam">加密</span></label>
+        </p>
+    </div>
+    <!-- 城市列表 s -->
+    <div class="relative">
+        <div class="index_city city_list hide" id="city-list">
+            <p class="city_content clearfix">
+                <?php for($i=0;$i<10;$i+=1){?>
+                <a href="#">北京</a><a href="#">深圳</a><a href="#">广州</a><a href="#">上海</a><a href="#">南京</a>
+                <?php }?>
+            </p>
+        </div>
+    </div>
+    <!-- 城市列表 end -->
+    <div class="padding_20 clearfix padding_top_0">
+        <!-- 搜索 s -->
+        <div class="mod search_list">
+            <h2 class="tab_title">
+                <span class="hover" onclick="ec.index.tab(this, 0)">车源搜索</span>
+                <span onclick="ec.index.tab(this, 1)">货源搜索</span>
+                <i class="icon icon_dropdown"></i>
+            </h2>
+            <div class="mod_box padding_20">
+                <div class="search_tool bg_new" id="search-tool">
+                    <form action="#">
+                        <p class="line"><label id="label-text">车源地：</label><span id="linkSelect_1"></span></p>
+                        <p class="line"><label>目的地：</label><span id="linkSelect_2"></span></p>
+                        <p class="line">
+                          <label>关键字：</label><input type="text" name="keyword" class="keywords">
+                          <button type="submit">搜索</button>
+                        </p>
+                    </form>
+                </div>
+                <div>
+                    <div class="tab_box" id="tab_0">
+                        <div class="search_list padding_top_15" id="search_list_0">
+                            <table width="100%">
+                                <tbody>
+                                    <?php for($i=0;$i<5;$i+=1){?>
+                                    <tr>
+                                      <td><a href="#">这里是最新公告信息这里是最新公告信息</a></td>
+                                      <td width="100" align="right">2014-08-01</td>
+                                    </tr>
+                                    <?php }?>
+                                </tbody>
+                            </table>
+                            <include file="PUBLIC:page" />
+                        </div>
+                    </div>
+                    <div class="tab_box hide" id="tab_1">
+                        <div class="search_list padding_top_15" id="search_list_1">
+                            <table width="100%">
+                                <tbody>
+                                    <?php for($i=0;$i<5;$i+=1){?>
+                                    <tr>
+                                      <td><a href="#">这里是最新公告信息这里是最新公告信息</a></td>
+                                      <td width="100" align="right">2014-08-01</td>
+                                    </tr>
+                                    <?php }?>
+                                </tbody>
+                            </table>
+                            <include file="PUBLIC:page" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索 end -->
+
+        <!-- 滚动资讯 s -->
+        <div class="mod search_list">
+            <h2>
+                <span>最新资讯</span>
+                <i class="icon icon_dropdown"></i>
+            </h2>
+            <div class="mod_box padding_20">
+                <div class="scroll_news">
+                    <div id="scrollNews" class="scroll_news_content">
+                        <table width="100%">
+                            <tbody>
+                              <?php for($i=0;$i<20;$i+=1){?>
+                              <tr>
+                                <td><a href="#">这里是最新公告信息这里是最新公告信息</a><?php echo $i;?></td>
+                                <td width="100" align="right">2014-08-01</td>
+                              </tr>
+                              <?php }?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 滚动资讯 end -->
+    </div>
+    <script src="__PUBLIC__/js/index.js"></script>
+</block>

@@ -1,0 +1,84 @@
+<!-- BEGIN Sidebar -->
+<div id="sidebar" class="sidebar">
+	<div class="search">
+		<form action="#"><input type="input" class="keyword" value="Search"/><button type="submit" class="icon icon_search btn_search"></button></form>
+	</div>
+    <!-- BEGIN Navlist -->
+    <ul class="nav_list" id="nav-list">
+        <li  class="active">
+            <a href="javascript:;" class="dropdown_toggle nav_li">
+                <span>发布资讯</span>
+                <i class="icon icon_arr"></i>
+            </a>
+            <!-- BEGIN Submenu -->
+            <ul class="submenu">
+                <li class="active"><a href="#">快捷发布</a></li>
+                <li><a href="#">发布货源信息</a></li>
+                <li><a href="#">发布车源信息</a></li>
+                <li><a href="#">信息记录</a></li>
+                <li><a href="#">加急记录</a></li>
+                <li><a href="#">循环记录</a></li>
+            </ul>
+            <!-- END Submenu -->
+        </li>
+
+        <li>
+            <a href="javascript:;" class="dropdown_toggle nav_li">
+                <span>实用工具</span>
+                <i class="icon icon_arr"></i>
+            </a>
+
+            <!-- BEGIN Submenu -->
+            <ul class="submenu">
+                <li class="active"><a href="#">快递查询</a></li>
+				<li><a href="/index.php/Home/Plugs/count">计算器</a></li>
+				<li><a href="/index.php/Home/Plugs/weather">天气预报</a></li>
+				<li><a href="#">地图查询</a></li>
+				<li><a href="#">手机归属地查询</a></li>
+				<li><a href="#">身份证查询</a></li>
+                <li><a href="#">车辆验证</a></li>
+            </ul>
+            <!-- END Submenu -->
+        </li>
+        <li>
+            <a href="javascript:;" class="dropdown_toggle nav_li">
+                <span>其它</span>
+                <i class="icon icon_arr"></i>
+            </a>
+
+            <!-- BEGIN Submenu -->
+            <ul class="submenu">
+                <li class="active"><a href="#">子分类</a></li>
+                <li><a href="#">子分类</a></li>
+                <li><a href="#">子分类</a></li>
+                <li><a href="#">子分类</a></li>
+                <li><a href="#">子分类</a></li>
+                <li><a href="#">子分类</a></li>
+            </ul>
+            <!-- END Submenu -->
+        </li>
+    </ul>
+    <!-- END Navlist -->
+
+    <!-- BEGIN Sidebar Collapse Button -->
+    <i class="icon icon_arr_left visible_desktop" id="sidebar-collapse" title="显示/隐藏左边导航栏"></i>
+    <!-- END Sidebar Collapse Button -->
+</div>
+<!-- END Sidebar -->
+<script>
+$(function() {
+    $('#nav-list .dropdown_toggle').on('click', function(){
+        var $submenu = $(this).next();
+        var display = $submenu.css('display');
+        $submenu.slideToggle(200);
+        if(display == 'none') {
+            //$submenu.sli
+        }
+    });
+    $('#sidebar-collapse').on('click', function(){
+        $(this).toggleClass('icon_arr_right1');
+        $('#sidebar').toggleClass('hide_left');
+        $('#main-content').toggleClass('show_left');
+    });
+});
+</script>

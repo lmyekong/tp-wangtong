@@ -1,0 +1,51 @@
+<extend name="Public:layout" />
+<!-- 清除不需要的模板 -->
+<block name="top"></block>
+<block name="left"></block>
+<block name="breadcrumbs"></block>
+<!-- 清除不需要的模板 end -->
+
+<block name="mod_css">
+<link rel="stylesheet" media="all" href="__PUBLIC__/style/public.css?20140731" />
+</block>
+
+<block name="content">
+<div class="login_reg register">
+	<div class="login_reg_title">旺通物流管理系统</div>
+	<div class="login_reg_form">
+		<form action="/" method="POST">
+		<table width="100%">
+			<tr>
+				<td width="35%" class="textr">&nbsp;</td>
+				<td><h3>用户注册</h3></td>
+			</tr>
+			<tr>
+				<td width="35%" class="textr">用户名：</td>
+				<td><input type="text" name="usname" /></td>
+			</tr>
+			<tr>
+				<td class="textr">邮箱：</td>
+				<td>
+					<input type="text" name="email" />
+				</td>
+			</tr>
+			<tr>
+				<td class="textr">密&nbsp;码：</td>
+				<td><input type="password" name="passwd" /></td>
+			</tr>
+			<tr>
+				<td class="textr">密码确认：</td>
+				<td><input type="password" name="passwd2" /></td>
+			</tr>
+			<tr>
+				<td class="textr">&nbsp;</td>
+				<td class="login_reg_btn">
+					<button type="submit">注册</button>
+					<button type="cancel">取消</button>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+</div>
+</block>

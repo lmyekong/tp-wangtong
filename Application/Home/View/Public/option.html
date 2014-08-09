@@ -1,0 +1,96 @@
+<include file="PUBLIC:header" />
+<include file="PUBLIC:top" />
+<style>
+.opt_key_list span{margin-right: 20px;}
+</style>
+<!-- BEGIN Container -->
+<div class="main" id="main">
+    <!-- BEGIN Left -->
+    <include file="PUBLIC:left" />
+    <!-- END Left -->
+    <!-- BEGIN Content -->
+    <div id="main-content" class="content show_left">
+        <include file="PUBLIC:breadcrumbs" />
+        <script>
+            //设置面包宵
+            gid('title').innerHTML = '设置';
+        </script>
+
+		<div class="padding_20" id="weather-list">
+    	    <!-- 关键字设置 s -->
+            <div class="mod search_list margin_top_15">
+                <h2>
+                    <span>相关设置</span>
+                    <i class="icon icon_dropdown"></i>
+                </h2>
+                <div class="mod_box padding_20">
+                    <h3>关键字设置：</h3>
+                    <table width="100%">
+                        <tr>
+                            <td width="100" class="textr">货物名：</td>
+                            <td width="160"><input type="text" name="name" /></td>
+                            <td width="70"><button type="button">添加</button></td>
+                            <td>
+                                <p class="opt_key_list">
+                                    <span>常用名1</span>
+                                    <span>常用名2</span>
+                                    <span>常用名3</span>
+                                    <span>常用名4</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textr">车辆型号：</td>
+                            <td><input type="text" name="number" /></td>
+                            <td><button type="button">添加</button></td>
+                            <td>
+                                <p class="opt_key_list">
+                                    <span>常用名1</span>
+                                    <span>常用名2</span>
+                                    <span>常用名3</span>
+                                    <span>常用名4</span>
+                                </p>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <h3 class="margin_top_30">其它设置：</h3>
+                    <table width="100%">
+                        <tr>
+                            <td width="100" class="textr">&nbsp;</td>
+                            <td>
+                                <input type="checkbox" name="autoLogin" class="vam"/>
+                                <span class="vam">新消息提醒</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 关键字设置 end -->
+            <!-- 城市列表 s -->
+            <div class="mod search_list margin_top_15">
+                <h2>
+                    <span>城市列表</span>
+                    <i class="icon icon_dropdown"></i>
+                </h2>
+                <div class="mod_box padding_20">
+
+                    <form>
+                        <label>城市名：</label><input type="text" name="city" />
+                        <button type="submit">确定添加</button>
+                    </form>
+
+                    <!-- 城市列表 s -->
+                    <div class="city_list clearfix">
+                      <?php for($i=0;$i<10;$i+=1){?>
+                      <a href="#">北京</a><a href="#">深圳</a><a href="#">广州</a><a href="#">上海</a><a href="#">南京</a>
+                      <?php }?>
+                    </div>
+                    <!-- 城市列表 end -->
+                </div>
+            </div>
+            <!-- 城市列表 end -->
+		</div>
+	</div>
+</div>
+<include file="PUBLIC:footer" />
